@@ -21,6 +21,8 @@
   "globals": {
     "angular": false,
     "app": false,
+    "User": false,
+    "Auth": false,
     "Firebase": false
   }
 }
