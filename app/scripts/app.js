@@ -1,33 +1,29 @@
+/* global app:true */
+
 'use strict';
 
-/**
- * @ngdoc overview
- * @name angNewsApp
- * @description
- * # angNewsApp
- *
- * Main module of the application.
- */
-angular
-  .module('angNewsApp', [
-    'ngAnimate',
-    'ngCookies',
-    'ngResource',
-    'ngRoute',
-    'ngSanitize',
-    'ngTouch'
-  ])
-  .config(function ($routeProvider) {
+var app = angular.module('angNewsApp', [
+   'ngAnimate',
+   'ngCookies',
+   'ngResource',
+   'ngSanitize',
+   'ngRoute',
+   'ngTouch',
+   'firebase'
+]);
+
+app.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        templateUrl: 'views/posts.html',
+        controller: 'PostsCtrl'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+      .when('/posts/:postId', {
+        templateUrl: 'views/showpost.html',
+        controller: 'PostViewCtrl'
       })
       .otherwise({
         redirectTo: '/'
       });
-  });
+
+}).constant('FIREBASE_URL', 'https://angularnewsapp.firebaseio.com/');

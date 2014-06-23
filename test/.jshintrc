@@ -22,6 +22,7 @@
     "after": false,
     "afterEach": false,
     "angular": false,
+    "app": false,
     "before": false,
     "beforeEach": false,
     "browser": false,
@@ -33,4 +34,3 @@
     "spyOn": false
   }
 }
-
