@@ -14,7 +14,8 @@ Database:
 Firebase - Free Tier
 
 
-
+Client-side validation and local storage implemented.
+Removing server side authorization
 DEPLOYMENT - in progress
 
 - Heroku or OpenShift
